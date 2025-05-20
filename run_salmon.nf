@@ -49,7 +49,7 @@ process SALMON_QUANT {
 
     input:
     tuple val(sample_id), path(reads)
-    path index
+    each index
 
     output:
     path "${sample_id}", emit: quant
